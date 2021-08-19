@@ -11,7 +11,7 @@ setup(
     # Needed for dependencies
     install_requires=['requests'],
     # *strongly* suggested for sharing
-    version='0.2.1',
+    version='0.2.2',
     # The license can be anything you like
     license='MIT',
     description='Wrapper for requests package that includes base settings such as base url',
