@@ -9,9 +9,9 @@ setup(
     # Needed to actually package something
     packages=['aybrequests'],
     # Needed for dependencies
-    install_requires=[],
+    install_requires=['requests'],
     # *strongly* suggested for sharing
-    version='0.2.0',
+    version='0.2.1',
     # The license can be anything you like
     license='MIT',
     description='Wrapper for requests package that includes base settings such as base url',
