@@ -4,7 +4,7 @@ class AYBRequest():
 
     def urljoiner(self,url):
         result = self.prefix_url
-        if not url.beginswith('/'):
+        if not url.startswith('/'):
             result+='/'
         result+=url
         return 
