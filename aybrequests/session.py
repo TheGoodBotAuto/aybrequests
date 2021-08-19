@@ -1,14 +1,7 @@
 from requests import Session
+import url
 
 class AYBSession(Session):
-
-    def urljoiner(self,url):
-        result = self.prefix_url
-        if not url.startswith('/'):
-            result+='/'
-        result+=url
-        return 
-
 
     def __init__(self, prefix_url=None, *args, **kwargs):
         super(AYBSession, self).__init__(*args, **kwargs)
@@ -17,5 +10,5 @@ class AYBSession(Session):
         self.prefix_url = prefix_url
 
     def request(self, method, url, *args, **kwargs):
-        url = self.urljoiner(url)
+        url = url.urljoiner(self.prefix_url,url)
         return super(AYBSession, self).request(method, url, *args, **kwargs)
