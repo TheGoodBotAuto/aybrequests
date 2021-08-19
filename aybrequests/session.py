@@ -1,5 +1,5 @@
 from requests import Session
-import url
+from aybrequests.url_utils import urljoiner
 
 class AYBSession(Session):
 
@@ -10,5 +10,5 @@ class AYBSession(Session):
         self.prefix_url = prefix_url
 
     def request(self, method, url, *args, **kwargs):
-        url = url.urljoiner(self.prefix_url,url)
+        url = urljoiner(self.prefix_url,url)
         return super(AYBSession, self).request(method, url, *args, **kwargs)
